@@ -2,13 +2,11 @@
 
 > 利用CSS3, :before, :after伪类，实现纯CSS的tooltip效果
 
-
-![css tipsy](https://img.smohan.net/article/ae2a3779dff81dc626df5e58ecf5aa18.jpg)
-
-
 ### [DEMO](https://demo.smohan.net/im/tipsy/)
 
+### 可用性
 
+> 高级浏览器, 受父级元素影响较大
 
 ### 使用
 
@@ -25,7 +23,7 @@
 ...
 ```
 
-### API
+### 可用样式
 
 ```css
 .mo-tipsy, .mo-tipsy--top : 正上方显示
@@ -43,3 +41,5 @@
 .mo-tipsy--large : //大尺寸, 260px
 //尺寸样式需要配合 .mo-tipsy, .mo-tipsy--[top|bottom|left|right...] 一起使用
 ```
+
+![css tipsy](https://img.smohan.net/article/ae2a3779dff81dc626df5e58ecf5aa18.jpg)
