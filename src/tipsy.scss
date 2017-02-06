@@ -1,0 +1,238 @@
+/*!
+ * tipsy.css v1.0.0
+ * smohan https://smohan.im
+ * The MIT License (MIT)
+ * https://github.com/S-mohan/tipsy
+ */
+
+
+
+//色值
+$background: rgba(#111, 0.9)!default;
+
+
+[class^="mo-tipsy--"], [class*=" mo-tipsy--"] {
+	position: relative;
+	overflow: visible;
+}
+[class^="mo-tipsy--"], [class*=" mo-tipsy--"] {
+	&:before, &:after {
+		position: absolute;
+		transform: translate3d(0, 0, 0);
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition: all 0.18s ease-out 0.18s;
+		z-index: 10;
+		transform-origin: top;
+		box-sizing: border-box;
+		visibility: hidden;
+	}
+	//
+	&:before {
+		content: '';
+		background: transparent;
+		border: 6px solid transparent;
+	}
+	&:after {
+		background-color: $background;
+		border-radius: 1px;
+		color: #fff;
+		content: attr(data-tipsy);
+		font-size: 12px;
+		margin: 0;
+		padding: 8px 10px;
+		line-height: 1;
+		white-space: nowrap;
+		text-align: center;
+	}
+	&:hover {
+		&:before, &:after {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+}
+//default && top
+.mo-tipsy, .mo-tipsy--top {
+	&:before, &:after {
+		left: 50%;
+		bottom: 100%;
+		transform: translate3d(-50%, 10px, 0)
+	}
+	&:before {
+		margin-bottom: -1px;
+		border-top-color: $background;
+	}
+	&:after {
+		margin-bottom: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(-50%, 0, 0)
+		}
+	}
+}
+//bottom
+.mo-tipsy--bottom {
+	&:before, &:after {
+		left: 50%;
+		top: 100%;
+		transform: translate3d(-50%, -10px, 0)
+	}
+	&:before {
+		margin-top: -1px;
+		border-bottom-color: $background;
+	}
+	&:after {
+		margin-top: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(-50%, 0, 0)
+		}
+	}
+}
+//left
+.mo-tipsy--left {
+	&:before, &:after {
+		right: 100%;
+		top: 50%;
+		transform: translate3d(10px, -50%, 0)
+	}
+	&:before {
+		margin-right: -1px;
+		border-left-color: $background;
+	}
+	&:after {
+		margin-right: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(0, -50%, 0)
+		}
+	}
+}
+//right
+.mo-tipsy--right {
+	&:before, &:after {
+		left: 100%;
+		top: 50%;
+		transform: translate3d(-10px, -50%, 0)
+	}
+	&:before {
+		margin-left: -1px;
+		border-right-color: $background;
+	}
+	&:after {
+		margin-left: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(0, -50%, 0)
+		}
+	}
+}
+//top && left
+.mo-tipsy--top-left {
+	&:before, &:after {
+		left: 0;
+		bottom: 100%;
+		transform: translate3d(0, 10px, 0)
+	}
+	&:before {
+		margin-left: 6px;
+		margin-bottom: -1px;
+		border-top-color: $background;
+	}
+	&:after {
+		margin-bottom: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(0, 0, 0)
+		}
+	}
+}
+//top && right
+.mo-tipsy--top-right {
+	&:before, &:after {
+		right: 0;
+		bottom: 100%;
+		transform: translate3d(0, -10px, 0)
+	}
+	&:before {
+		margin-right: 6px;
+		margin-bottom: -1px;
+		border-top-color: $background;
+	}
+	&:after {
+		margin-bottom: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(0, 0, 0)
+		}
+	}
+}
+//bottom && right
+.mo-tipsy--bottom-right {
+	&:before, &:after {
+		right: 0;
+		top: 100%;
+		transform: translate3d(0, -10px, 0)
+	}
+	&:before {
+		margin-right: 6px;
+		margin-top: -1px;
+		border-bottom-color: $background;
+	}
+	&:after {
+		margin-top: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(0, 0, 0)
+		}
+	}
+}
+//bottom && left
+.mo-tipsy--bottom-left {
+	&:before, &:after {
+		left: 0;
+		top: 100%;
+		transform: translate3d(0, 10px, 0)
+	}
+	&:before {
+		margin-left: 6px;
+		margin-top: -1px;
+		border-bottom-color: $background;
+	}
+	&:after {
+		margin-top: 11px;
+	}
+	&:hover {
+		&:before, &:after {
+			transform: translate3d(0, 0, 0)
+		}
+	}
+}
+//size
+.mo-tipsy--small, .mo-tipsy--medium, .mo-tipsy--large {
+	&:after {
+		white-space: normal;
+		line-height: 1.4;
+		word-wrap: break-word;
+	}
+}
+.mo-tipsy--small:after {
+	width: 80px;
+}
+.mo-tipsy--medium:after {
+	width: 160px;
+}
+.mo-tipsy--large:after {
+	width: 260px;
+	max-width: 90vw;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="smohan, tooltip">
+	<meta name="description" content="利用CSS3, :before, :after伪类，实现纯CSS的tooltip效果">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>Tipsy | 水墨寒的博客</title>
+	<link rel="shortcut icon" type="image/ico" href="https://demo.smohan.net/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./dist/tipsy.min.css">
+	<style type="text/css" media="screen">
+		* {
+			box-sizing: border-box;
+			margin:  0;
+			padding: 0;
+		}
+		body {
+			text-align: center;
+			background-color: #f7ffc7;
+		}
+		button {
+			display: block;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			max-width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+			line-height: 30px;
+			padding: 6px 10px;
+			border:  1px solid #0275d8;
+			background-color: #0275d8;
+			color: #fff;
+			outline: none;
+		}
+		.button-groups {
+			width: 600px;
+			font-size: 0;
+			margin: 10px auto 60px auto;
+		}
+		.button-groups button {
+			display: inline-block;
+			font-size: 14px;
+			width: 30%;
+		}
+		.button-groups button:nth-of-type(2),
+		.button-groups button:nth-of-type(5),
+		.button-groups button:nth-of-type(8) {
+			margin-left: 5%;
+			margin-right: 5%;
+		}
+		.demo-title {
+			font-size: 2rem;
+			padding: 1rem;
+		}
+		.demo-description,.demo-links {
+			padding: 1rem;
+		}
+		a {
+			color: #0275d8;
+		}
+	</style>
+</head>
+<body>
+
+
+	<h1 class="demo-title">
+		Tipsy
+	</h1>
+
+	<p class="demo-description">
+		利用CSS3, :before, :after伪类，实现纯CSS的tooltip效果
+	</p>
+
+	<div class="demo-links">
+		<p>项目地址： <a href="https://smohan.im/lab/tipsy">https://smohan.im/lab/tipsy</a></p>
+		<p>GitHub：<a href="https://smohan.im/lab/tipsy">https://github.com/S-mohan/tipsy</a></p>
+	</div>
+
+	<div class="button-groups">
+		<button type="button" class="mo-tipsy--top-left" data-tipsy="我出现在左上角">我出现在左上角</button>
+		<button type="button" class="mo-tipsy--top" data-tipsy="我出现在上面">我出现在上面</button>
+		<button type="button" class="mo-tipsy--top-right" data-tipsy="我出现在右上角">我出现在右上角</button>
+		<button type="button" class="mo-tipsy--left" data-tipsy="我出现在左边">我出现在左边</button>
+		<button type="button" style="background: #ccc; border-color: #ccc;">占位</button>
+		<button type="button" class="mo-tipsy--right" data-tipsy="我出现在右边">我出现在右边</button>
+		<button type="button" class="mo-tipsy--bottom-left" data-tipsy="我出现在左下角">我出现在左下角</button>
+		<button type="button" class="mo-tipsy--bottom" data-tipsy="我出现在下面">我出现在下面</button>
+		<button type="button" class="mo-tipsy--bottom-right" data-tipsy="我出现在右下角">我出现在右下角</button>
+	</div>
+
+
+
+	<button type="button" class="mo-tipsy mo-tipsy--small" data-tipsy="我可以换行,我有很多文字,我的最大宽度是80px">small tipsy</button>
+
+	<button type="button" class="mo-tipsy mo-tipsy--medium" data-tipsy="我可以换行,我有很多文字,我的最大宽度是160px">medium tipsy</button>
+
+	<button type="button" class="mo-tipsy mo-tipsy--large" data-tipsy="我可以换行,我有很多文字,我的最大宽度是260px.我可以换行,我有很多文字,我的最大宽度是260px.我可以换行,我有很多文字,我的最大宽度是260px">large tipsy</button>
+
+
+</body>
+</html>
