@@ -46,5 +46,3 @@
 .mo-tipsy--large : //大尺寸, 260px
 //尺寸样式需要配合 .mo-tipsy, .mo-tipsy--[top|bottom|left|right...] 一起使用
 ```
-
-![css tipsy](https://img.smohan.net/article/ae2a3779dff81dc626df5e58ecf5aa18.jpg)
