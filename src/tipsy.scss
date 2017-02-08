@@ -5,14 +5,11 @@
  * https://github.com/S-mohan/tipsy
  */
 
-
-
 //色值
 $background: rgba(#111, 0.9) !default;
 //偏移量
 $threshold : 10px !default;
 $negThreshold : -10px !default;
-
 
 [class^="mo-tipsy--"], [class*=" mo-tipsy--"] {
 	position: relative;
