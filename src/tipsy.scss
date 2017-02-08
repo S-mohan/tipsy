@@ -8,7 +8,11 @@
 
 
 //色值
-$background: rgba(#111, 0.9)!default;
+$background: rgba(#111, 0.9) !default;
+//偏移量
+$threshold : 10px !default;
+$negThreshold : -10px !default;
+
 
 
 [class^="mo-tipsy--"], [class*=" mo-tipsy--"] {
@@ -59,7 +63,7 @@ $background: rgba(#111, 0.9)!default;
 	&:before, &:after {
 		left: 50%;
 		bottom: 100%;
-		transform: translate3d(-50%, 10px, 0)
+		transform: translate3d(-50%, $threshold, 0)
 	}
 	&:before {
 		margin-bottom: -1px;
@@ -79,7 +83,7 @@ $background: rgba(#111, 0.9)!default;
 	&:before, &:after {
 		left: 50%;
 		top: 100%;
-		transform: translate3d(-50%, -10px, 0)
+		transform: translate3d(-50%, $negThreshold, 0)
 	}
 	&:before {
 		margin-top: -1px;
@@ -139,7 +143,7 @@ $background: rgba(#111, 0.9)!default;
 	&:before, &:after {
 		left: 0;
 		bottom: 100%;
-		transform: translate3d(0, 10px, 0)
+		transform: translate3d(0, $threshold, 0)
 	}
 	&:before {
 		margin-left: 6px;
@@ -160,7 +164,7 @@ $background: rgba(#111, 0.9)!default;
 	&:before, &:after {
 		right: 0;
 		bottom: 100%;
-		transform: translate3d(0, -10px, 0)
+		transform: translate3d(0, $negThreshold, 0)
 	}
 	&:before {
 		margin-right: 6px;
@@ -181,7 +185,7 @@ $background: rgba(#111, 0.9)!default;
 	&:before, &:after {
 		right: 0;
 		top: 100%;
-		transform: translate3d(0, -10px, 0)
+		transform: translate3d(0, $negThreshold, 0)
 	}
 	&:before {
 		margin-right: 6px;
@@ -202,7 +206,7 @@ $background: rgba(#111, 0.9)!default;
 	&:before, &:after {
 		left: 0;
 		top: 100%;
-		transform: translate3d(0, 10px, 0)
+		transform: translate3d(0, $threshold, 0)
 	}
 	&:before {
 		margin-left: 6px;

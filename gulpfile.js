@@ -48,4 +48,4 @@ gulp.task('watch', () => {
 	gulp.watch('./src/**/*.scss', ['compile:sass'])
 })
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['min:css']);
