@@ -60,24 +60,31 @@
 		a {
 			color: #0275d8;
 		}
+		.gitbtns {
+			margin:20px;
+		}
+		.gitbtns iframe {
+			display: inline;
+			width: auto;
+			max-width: 120px;
+		}
 	</style>
 </head>
 <body>
-
-
 	<h1 class="demo-title">
 		Tipsy
 	</h1>
-
 	<p class="demo-description">
 		利用CSS3, :before, :after伪类，实现纯CSS的tooltip效果
 	</p>
-
 	<div class="demo-links">
 		<p>项目地址： <a href="https://smohan.im/lab/tipsy">https://smohan.im/lab/tipsy</a></p>
 		<p>GitHub：<a href="https://github.com/S-mohan/tipsy">https://github.com/S-mohan/tipsy</a></p>
 	</div>
-
+	<div class="gitbtns">
+		<iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=tipsy&type=star&count=true" frameborder="0" scrolling="0" height="20px"></iframe>
+		<iframe src="https://ghbtns.com/github-btn.html?user=S-mohan&repo=tipsy&type=fork&count=true" frameborder="0" scrolling="0" height="20px"></iframe>
+	</div>
 	<div class="button-groups">
 		<button type="button" class="mo-tipsy--top-left" data-tipsy="我出现在左上角">我出现在左上角</button>
 		<button type="button" class="mo-tipsy--top" data-tipsy="我出现在上面">我出现在上面</button>
@@ -90,14 +97,8 @@
 		<button type="button" class="mo-tipsy--bottom-right" data-tipsy="我出现在右下角">我出现在右下角</button>
 	</div>
 
-
-
 	<button type="button" class="mo-tipsy mo-tipsy--small" data-tipsy="我可以换行,我有很多文字,我的最大宽度是80px">small tipsy</button>
-
 	<button type="button" class="mo-tipsy mo-tipsy--medium" data-tipsy="我可以换行,我有很多文字,我的最大宽度是160px">medium tipsy</button>
-
 	<button type="button" class="mo-tipsy mo-tipsy--large" data-tipsy="我可以换行,我有很多文字,我的最大宽度是260px.我可以换行,我有很多文字,我的最大宽度是260px.我可以换行,我有很多文字,我的最大宽度是260px">large tipsy</button>
-
-
 </body>
 </html>
