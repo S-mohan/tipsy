@@ -8,8 +8,14 @@
 //色值
 $background: rgba(#111, 0.9) !default;
 //偏移量
-$threshold : 10px !default;
-$negThreshold : -10px !default;
+$threshold: 10px !default;
+$negThreshold: -10px !default;
+//small
+$small: 80px !default;
+//medium
+$medium: 160px !default;
+//large
+$large: 260px !default;
 
 [class^="mo-tipsy--"], [class*=" mo-tipsy--"] {
 	position: relative;
@@ -45,12 +51,19 @@ $negThreshold : -10px !default;
 		line-height: 1;
 		white-space: nowrap;
 		text-align: center;
+		max-height: 80vh;
 	}
 	&:hover {
 		&:before, &:after {
 			visibility: visible;
 			opacity: 1;
 			pointer-events: auto;
+		}
+	}
+	//not attribute 'data-tipsy'
+	&:not([data-tipsy]):hover {
+		&:before, &:after {
+			display: none;
 		}
 	}
 }
@@ -227,12 +240,12 @@ $negThreshold : -10px !default;
 	}
 }
 .mo-tipsy--small:after {
-	width: 80px;
+	width: $small;
 }
 .mo-tipsy--medium:after {
-	width: 160px;
+	width: $medium;
 }
 .mo-tipsy--large:after {
-	width: 260px;
+	width: $large;
 	max-width: 90vw;
 }
