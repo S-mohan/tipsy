@@ -2,7 +2,7 @@
 
 > 利用CSS3, :before, :after伪类，实现纯CSS的tooltip效果
 
-### [DEMO](https://demo.smohan.net/im/tipsy/)
+### [DEMO](https://s-mohan.github.io/demo/tipsy/index.html)
 
 ### 可用性
 > 兼容高级浏览器，受父级元素影响
